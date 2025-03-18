@@ -1,10 +1,10 @@
 package dados6faces;
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class Main {
     public static void main(String[] args) {
         
-        Random numeroAleatorio = new Random();
+        SecureRandom numeroAleatorio = new SecureRandom();
 
 
         int i;
@@ -18,7 +18,7 @@ public class Main {
 
         for (i = 0; i <= 100; i++){
 
-            int face = numeroAleatorio.nextInt(1,6);
+            int face = 1 + numeroAleatorio.nextInt(6);
             switch(face)
             {
                 case 1: 
@@ -41,6 +41,8 @@ public class Main {
                     break;
             }
         }
+
+    System.out.printf("1\t%d%n2\t%d%n3\t%d%n4\t%d%n5\t%d%n6\t%d%n", contador1, contador2, contador3, contador4, contador5, contador6);
 
     }
 
